@@ -1,0 +1,383 @@
+//google fonts
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+
+@mixin intro_base {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.haveskill {
+  font-family: "Nanum Myeongjo", serif;
+  background: #e8e8f3;
+  height: auto;
+  .haveskill_container {
+    position: relative;
+    height: 650px;
+    .haveskill_background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      filter: brightness(0.8);
+      background: center / cover no-repeat url("../img/dogskill.jpg");
+      p {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        color: white;
+        letter-spacing: 8px;
+      }
+    }
+  }
+  @mixin h1box {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  .haveskill_front {
+    padding-top: 100px;
+    h1 {
+      @include h1box();
+    }
+    .haveskill_front_lists {
+      padding-top: 80px;
+      padding-bottom: 160px;
+      place-content: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .menu {
+        position: relative;
+        display: inline-block;
+
+        top: 40px;
+        padding: 30px;
+        background: #e8e8f3;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+          -7px -7px 20px rgba(255, 255, 255, 1),
+          inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+          inset 7px 7px 15px rgba(55, 84, 170, 0),
+          inset -7px -7px 20px rgba(255, 255, 255, 0),
+          0px 0px 4px rgba(255, 255, 255, 0);
+        &::before,
+        &::after {
+          content: "";
+          background: #c3c2c7;
+          border-radius: 5px;
+          width: 30px;
+          height: 5px;
+          position: absolute;
+          left: 16px;
+          top: 27px;
+          transition: 0.2s ease;
+          z-index: 1;
+        }
+        &::before {
+          transform: rotate(0deg);
+        }
+        &::after {
+          transform: rotate(-90deg);
+        }
+        &.open {
+          opacity: 0.9;
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+          .button {
+            opacity: 1;
+            pointer-events: auto;
+            width: 60px;
+            height: 60px;
+            span {
+              position: absolute;
+              font-size: 12px;
+              font-weight: 600;
+              transform: translate(-50%, 100%);
+            }
+            &:first-of-type {
+              bottom: 40px;
+              right: 70px;
+              background: url("../img/html.png") no-repeat 50%/50% #e8e8f3;
+            }
+            &:nth-of-type(2) {
+              bottom: 80px;
+              background: url("../img/css.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.05s;
+            }
+            &:nth-of-type(3) {
+              bottom: 40px;
+              right: -70px;
+
+              background: url("../img/javascript.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.1s;
+            }
+            &:nth-of-type(4) {
+              bottom: -40px;
+              right: -70px;
+              background: url("../img/react.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.15s;
+            }
+            &:last-of-type {
+              bottom: -80px;
+              background: url("../img/nextjs.png") no-repeat 50% 45%/50% 45%
+                #e8e8f3;
+              transition-delay: 0.2s;
+            }
+          }
+        }
+      }
+      .button {
+        padding: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #e8e8f3;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: inherit;
+        transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+          0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .haveskill_back {
+    padding-top: 100px;
+    h1 {
+      @include h1box();
+    }
+    .haveskill_back_lists {
+      padding-top: 80px;
+      padding-bottom: 160px;
+      place-content: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .menu {
+        position: relative;
+        display: inline-block;
+
+        top: 40px;
+        padding: 30px;
+        background: #e8e8f3;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+          -7px -7px 20px rgba(255, 255, 255, 1),
+          inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+          inset 7px 7px 15px rgba(55, 84, 170, 0),
+          inset -7px -7px 20px rgba(255, 255, 255, 0),
+          0px 0px 4px rgba(255, 255, 255, 0);
+        &::before,
+        &::after {
+          content: "";
+          background: #c3c2c7;
+          border-radius: 5px;
+          width: 30px;
+          height: 5px;
+          position: absolute;
+          left: 16px;
+          top: 27px;
+          transition: 0.2s ease;
+          z-index: 1;
+        }
+        &::before {
+          transform: rotate(0deg);
+        }
+        &::after {
+          transform: rotate(-90deg);
+        }
+        &.open {
+          opacity: 0.9;
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+          .button {
+            opacity: 1;
+            pointer-events: auto;
+            width: 60px;
+            height: 60px;
+            span {
+              position: absolute;
+              font-size: 12px;
+              font-weight: 600;
+              transform: translate(-50%, 100%);
+            }
+            &:first-of-type {
+              bottom: 40px;
+              right: 70px;
+              background: url("../img/php.png") no-repeat 50%/50% #e8e8f3;
+            }
+            &:nth-of-type(2) {
+              bottom: 80px;
+              background: url("../img/jsp.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.05s;
+            }
+            &:nth-of-type(3) {
+              bottom: 40px;
+              right: -70px;
+
+              background: url("../img/nodejs.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.1s;
+            }
+            &:nth-of-type(4) {
+              bottom: -40px;
+              right: -70px;
+              background: url("../img/express.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.15s;
+            }
+            &:nth-of-type(5) {
+              bottom: -80px;
+              background: url("../img/api.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.2s;
+            }
+            &:last-of-type {
+              bottom: -40px;
+              right: 70px;
+              background: url("../img/typescript.png") no-repeat 50% 45%/50% 45%
+                #e8e8f3;
+              transition-delay: 0.25s;
+            }
+          }
+        }
+      }
+      .button {
+        padding: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #e8e8f3;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: inherit;
+        transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+          0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .haveskill_db {
+    padding-top: 100px;
+    h1 {
+      @include h1box();
+    }
+    .haveskill_db_lists {
+      padding-top: 80px;
+      padding-bottom: 160px;
+      place-content: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .menu {
+        position: relative;
+        display: inline-block;
+
+        top: 40px;
+        padding: 30px;
+        background: #e8e8f3;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+          -7px -7px 20px rgba(255, 255, 255, 1),
+          inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+          inset 7px 7px 15px rgba(55, 84, 170, 0),
+          inset -7px -7px 20px rgba(255, 255, 255, 0),
+          0px 0px 4px rgba(255, 255, 255, 0);
+        &::before,
+        &::after {
+          content: "";
+          background: #c3c2c7;
+          border-radius: 5px;
+          width: 30px;
+          height: 5px;
+          position: absolute;
+          left: 16px;
+          top: 27px;
+          transition: 0.2s ease;
+          z-index: 1;
+        }
+        &::before {
+          transform: rotate(0deg);
+        }
+        &::after {
+          transform: rotate(-90deg);
+        }
+        &.open {
+          opacity: 0.9;
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+          .button {
+            opacity: 1;
+            pointer-events: auto;
+            width: 60px;
+            height: 60px;
+            span {
+              position: absolute;
+              font-size: 12px;
+              font-weight: 600;
+              transform: translate(-50%, 100%);
+            }
+            &:first-of-type {
+              bottom: 40px;
+              right: 70px;
+              background: url("../img/mysql.png") no-repeat 50%/50% #e8e8f3;
+            }
+            &:nth-of-type(2) {
+              bottom: 80px;
+              right: 0px;
+              background: url("../img/mongodb.png") no-repeat 50%/ 50% #e8e8f3;
+              transition-delay: 0.05s;
+            }
+          }
+        }
+      }
+      .button {
+        padding: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: #e8e8f3;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: inherit;
+        transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
+          0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

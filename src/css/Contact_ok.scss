@@ -1,0 +1,44 @@
+//google fonts
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+* {
+  box-sizing: border-box;
+  background-color: rgb(158, 155, 155);
+}
+@mixin intro_base {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+
+.contact_ok {
+  height: auto;
+  @include intro_base();
+  text-align: center;
+  margin-top: 100px;
+  font-size: 32px;
+  a {
+    margin-top: 50px;
+    display: block;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 900;
+    }
+    border-radius: 10px;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  p {
+    background-color: #888;
+  }
+}

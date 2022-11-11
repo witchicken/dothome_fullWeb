@@ -1,0 +1,524 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", "Malgun Gothic", "AppleSDGothicNeo", Arial, Helvetica, serif, sans-serif;
+}
+
+header {
+  max-width: 1440px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 35px;
+}
+header form {
+  position: relative;
+}
+header form input {
+  width: 350px;
+  height: 35px;
+  text-align: center;
+  font-size: 17px;
+  border-radius: 5px;
+}
+header form .fas {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+}
+header .sign p {
+  display: inline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+nav ul .nav_wrapper {
+  cursor: pointer;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+nav ul .nav_wrapper .nav_detail {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  transition: all 0.2s linear;
+  display: flex;
+  margin-top: 16px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  padding: 0 150px;
+  top: -24px;
+  opacity: 0;
+  font-weight: 500;
+  z-index: -2;
+}
+nav ul .nav_wrapper .nav_detail a {
+  font-size: 13px;
+  padding-bottom: 2px;
+}
+nav ul .nav_wrapper .nav_detail a:not(:last-child) {
+  margin-right: 50px;
+}
+nav ul .navA:hover p {
+  color: violet;
+}
+nav ul .navA:hover .navA_detail {
+  opacity: 1;
+  top: 16px !important;
+  z-index: 0;
+}
+nav ul .navA:hover .navA_detail a:hover {
+  border-bottom: 2px solid violet;
+}
+nav ul .navB:hover p {
+  color: violet;
+}
+nav ul .navB:hover .navB_detail {
+  opacity: 1;
+  top: 16px !important;
+  z-index: 0;
+}
+nav ul .navB:hover .navB_detail a:hover {
+  border-bottom: 2px solid violet;
+}
+nav ul .navC:hover p {
+  color: violet;
+}
+nav ul .navC:hover .navC_detail {
+  opacity: 1;
+  top: 16px !important;
+  z-index: 0;
+}
+nav ul .navC:hover .navC_detail a:hover {
+  border-bottom: 2px solid violet;
+}
+nav ul .navD:hover p {
+  color: violet;
+}
+nav ul .navD:hover .navD_detail {
+  opacity: 1;
+  top: 16px !important;
+  z-index: 0;
+}
+nav ul .navD:hover .navD_detail a:hover {
+  border-bottom: 2px solid violet;
+}
+nav ul .nav_title:hover {
+  color: violet;
+  font-weight: 600;
+}
+nav .nav_underline {
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+  left: 0;
+}
+
+main .first_banner {
+  height: 600px;
+  background-image: url("../img/main_travel_adjust.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .first_banner h2 {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 40px;
+}
+main .first_banner span {
+  font-size: 25px;
+  color: white;
+}
+main .travel_random {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.recommend_location {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.recommend_location h1 {
+  margin-top: 30px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.recommend_location .slide_wrapper {
+  position: relative;
+  width: 1440px;
+  overflow: hidden;
+  height: 430px;
+}
+.recommend_location .slide_wrapper .fa-arrow-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 23px;
+}
+.recommend_location .slide_wrapper .fa-arrow-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  font-size: 23px;
+}
+.recommend_location .slide_wrapper .slide_container {
+  position: absolute;
+  width: 4320px;
+  display: flex;
+  margin: 0 20px;
+  gap: 25px;
+  left: 0;
+}
+.recommend_location .slide_wrapper .slide_container li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 400px;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12);
+  transition: 0.5s linear;
+  border-radius: 15px;
+}
+.recommend_location .slide_wrapper .slide_container li h2 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description {
+  margin-top: 20px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description div:last-child {
+  margin-top: 8px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description div {
+  display: flex;
+  width: 400px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description div img {
+  margin-left: 50px;
+  margin-top: 7px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description div div {
+  display: block;
+  margin-left: 30px;
+}
+.recommend_location .slide_wrapper .slide_container li .slide_description div span {
+  width: 50px;
+  color: green;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.recommend_location .slide_wrapper .slide_container li .price {
+  margin-top: 40px;
+  font-size: 26px;
+  cursor: pointer;
+}
+.recommend_location .slide_wrapper .slide_container li .price span {
+  font-size: 20px;
+}
+.recommend_location .slide_wrapper .slide_container li:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.recommend_location .slide_wrapper .animated {
+  transition: 0.5s ease-out;
+}
+
+.slide_img {
+  width: 430px;
+  margin-top: 10px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.img_bangkok {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/bangkok.jpg");
+}
+
+.img_hongkong {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/hongkong.jpg");
+}
+
+.img_osaka {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/osaka.jpg");
+}
+
+.img_sebu {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/cebu.jpg");
+}
+
+.img_hawaii {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/hawaii.jpg");
+}
+
+.img_taipei {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/taipei.jpg");
+}
+
+.img_okinawa {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/okinawa.jpg");
+}
+
+.img_toyko {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/tokyo.jpg");
+}
+
+.img_jeju {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/resize_photo/jeju.jpg");
+}
+
+.top_hotel {
+  display: flex;
+  justify-content: space-between;
+}
+.top_hotel .slide_arrow {
+  margin-top: 40px;
+  margin-right: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  color: skyblue;
+  position: relative;
+}
+.top_hotel .slide_arrow i:after {
+  content: "";
+  position: absolute;
+  transform: translate(-23px, -3px);
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.top_hotel .slide_arrow i:hover {
+  color: blue;
+}
+.top_hotel .slide_arrow i:first-child {
+  margin-right: 30px;
+}
+
+.slide_img_hotel {
+  width: 450px;
+  height: 350px;
+  border-radius: 8px;
+}
+
+.hotel_wrapper {
+  height: 560px !important;
+}
+
+.hotel_container li {
+  align-items: baseline !important;
+  height: 550px !important;
+}
+
+.hotel_description .des_loca {
+  display: flex;
+  margin-top: 15px;
+}
+.hotel_description .des_loca svg {
+  margin-left: 5px;
+}
+.hotel_description .des_loca p {
+  margin-left: 10px;
+}
+.hotel_description h3 {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 28px;
+}
+.hotel_description .hotel_review {
+  display: flex;
+  margin-left: 30px;
+}
+.hotel_description .hotel_review .review_star {
+  margin-top: 45px;
+}
+.hotel_description .hotel_review .price {
+  margin-left: 45px;
+}
+
+.img_hiddenbay {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/yeosu_hiddenbay.jpg");
+}
+
+.img_jshotel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/jeju_jshotel.jpg");
+}
+
+.img_fairfield {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/seoul_fairfield.jpg");
+}
+
+.img_holiday {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/gwangju_holiday.jpg");
+}
+
+.img_ACC {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/Gwangju_ACC.jpg");
+}
+
+.img_venecia {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/yeosu_venecia.jpg");
+}
+
+.img_grand {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/hotel/jeju_grandchosun.jpg");
+}
+
+.animatedHotel {
+  transition: 0.5s ease-out;
+}
+
+.recommend_random {
+  margin-top: 33px;
+  width: 100%;
+  height: 400px;
+  background-color: #f1f2f8;
+  position: relative;
+}
+.recommend_random h1 {
+  margin-left: 50px;
+  padding-top: 30px;
+  font-size: 33px;
+}
+.recommend_random .btn_random {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.recommend_random .pushable {
+  background: hsl(340deg, 100%, 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.recommend_random .front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg, 100%, 47%);
+  color: white;
+  transform: translateY(-6px);
+}
+.recommend_random .pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.random_view_p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+.random_view_p p {
+  display: inline;
+}
+
+footer {
+  background-color: #f1f2f8;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-left: 20px;
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-right: 20px;
+}
+footer div a {
+  cursor: pointer;
+}
+footer div a:not(:last-child):after {
+  margin: 0 7px;
+  content: "";
+  border-right: 1px solid gray;
+}
+
+.main_logo {
+  display: flex;
+}
+.main_logo img {
+  width: 60px;
+  height: 60px;
+}
+.main_logo h1 {
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=main.css.map */

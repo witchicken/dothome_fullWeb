@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.header {
+  z-index: 9999;
+}
+
+.write {
+  height: auto;
+}
+.write .write_container {
+  position: relative;
+  height: 300px;
+}
+.write .write_container .write_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(0.8);
+  background: center/cover no-repeat url("../img/comp_board.jpg");
+}
+.write .write_container .write_background p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 8px;
+}
+.write .write_content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+.write .write_content .write_content_main {
+  text-align: center;
+}
+.write .write_content .write_content_main h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.write .write_content .write_content_main .write_area {
+  border: 1px solid black;
+}
+.write .write_content .write_content_main .write_area .write_title {
+  width: 100%;
+  padding: 5px 20px;
+}
+.write .write_content .write_content_main .write_area .write_title .write_title_text {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.write .write_content .write_content_main .write_area .write_content {
+  width: 100%;
+  padding: 5px 20px;
+}
+.write .write_content .write_content_main .write_area .write_content .write_content_text {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.write .write_content .write_content_main .write_area .write_btn_writeok button {
+  border: none;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.write .write_content .write_content_main .write_area .write_btn_writeok button:hover {
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=Write.css.map */

@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+.introduction .introduction_main {
+  position: relative;
+  height: 700px;
+}
+.introduction .introduction_main .introduction_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(0.8);
+  background: center/cover no-repeat url("../img/comp_introduction.jpg");
+}
+.introduction .introduction_main .introduction_msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.introduction .introduction_main .introduction_msg h1 {
+  font-size: 40px;
+  padding-bottom: 40px;
+  color: white;
+  line-height: 60px;
+}
+.introduction .introduction_main .introduction_msg p {
+  font-size: 22px;
+  color: white;
+}
+.introduction .introduction_main .introduction_nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  min-width: 800px;
+}
+.introduction .introduction_main .introduction_nav nav ul {
+  width: 100%;
+  display: flex;
+}
+.introduction .introduction_main .introduction_nav nav ul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 25%;
+  height: 60px;
+  transition: all 1s;
+}
+.introduction .introduction_main .introduction_nav nav ul a:hover {
+  background-color: rgb(95, 127, 255);
+}
+.introduction .introduction_main .introduction_nav nav ul a:hover li {
+  color: black;
+  font-weight: 700;
+}
+.introduction .introduction_main .introduction_nav nav ul a li {
+  text-decoration: none;
+  color: #999;
+  font-size: 18px;
+}
+.introduction .introduction_main .introduction_nav nav ul .intro_active {
+  background-color: rgb(95, 127, 255) !important;
+}
+.introduction .introduction_main .introduction_nav nav ul .intro_active li {
+  color: black !important;
+  font-weight: 700 !important;
+}
+.introduction .introduction_hello {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 80px;
+}
+.introduction .introduction_hello h1 {
+  margin-bottom: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.introduction .introduction_hello .introduction_hello_container {
+  display: flex;
+  justify-content: center;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_content {
+  width: 50%;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_content h3 {
+  line-height: 40px;
+  color: #888;
+  margin-bottom: 80px;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_content p {
+  color: #888;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_svg {
+  width: 50%;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_svg svg {
+  width: 100%;
+  height: 100%;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_svg svg .path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+}
+.introduction .introduction_hello .introduction_hello_container .introduction_hello_svg svg .path1 {
+  stroke-dasharray: 6884;
+  animation: drawPath1 2s linear, floating 2.2s linear infinite;
+}
+@keyframes drawPath1 {
+  0% {
+    stroke-dashoffset: 6884;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes floating {
+  50% {
+    transform: translate3d(0, 40px, 0);
+  }
+}
+.introduction .introduction_career {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.introduction .introduction_career h1 {
+  margin-bottom: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.introduction .introduction_career .introduction_career_container {
+  display: flex;
+}
+.introduction .introduction_career .introduction_career_container .year_container {
+  width: 40%;
+}
+.introduction .introduction_career .introduction_career_container .year_container .introduction_career_year {
+  font-size: 90px;
+  color: skyblue;
+  font-weight: 600;
+  transition: all 0.5s;
+  display: flex;
+  overflow: hidden;
+  height: 90px;
+}
+.introduction .introduction_career .introduction_career_container .year_container .introduction_career_year ul {
+  display: inline-block;
+  transition: all 0.5s linear;
+  transform: translateY(-180px);
+}
+.introduction .introduction_career .introduction_career_container .year_container .introduction_career_year ul li {
+  list-style: none;
+  display: block;
+  height: 90px;
+}
+.introduction .introduction_career .introduction_career_container .year_fixed {
+  position: fixed !important;
+  top: 100px !important;
+  font-size: 100px Im !important;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents {
+  width: 55%;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content {
+  margin-bottom: 160px;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content ul li {
+  display: flex;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content ul li .date {
+  display: flex;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content ul li .date .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: skyblue;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content ul li .date .date_txt p {
+  font-size: 21px;
+}
+.introduction .introduction_career .introduction_career_container .introduction_career_contents .introduction_career_year_content ul li .content_txt {
+  margin-left: 20px;
+  margin-bottom: 35px;
+}
+.introduction .introduction_news {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 80px;
+}
+.introduction .introduction_news .introduction_news_title {
+  margin-bottom: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list {
+  display: flex;
+  flex-direction: column;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list .news_board_content {
+  display: flex;
+  column-gap: 100px;
+  margin-bottom: 50px;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list .news_board_content .news_board_content_img {
+  width: 300px;
+  height: 250px;
+  background-color: violet;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list .news_board_content .news_board_content_des {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list .news_board_content .news_board_content_des h1 {
+  font-size: 22px;
+}
+.introduction .introduction_news .news_board_container .news_board_content_list .news_board_content .news_board_content_des p {
+  font-size: 13px;
+  color: #888;
+}
+.introduction .introduction_location {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 80px;
+}
+.introduction .introduction_location h1 {
+  margin-bottom: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.introduction .introduction_location .introduction_location_kakao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Introduction.css.map */

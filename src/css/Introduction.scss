@@ -1,0 +1,272 @@
+//google fonts
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+
+//mixin
+@mixin intro_base {
+  font-family: "Nanum Myeongjo", serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.introduction {
+  .introduction_main {
+    position: relative;
+    height: 700px;
+    .introduction_img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      filter: brightness(0.8);
+      background: center / cover no-repeat url("../img/comp_introduction.jpg");
+    }
+    .introduction_msg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+        font-size: 40px;
+        padding-bottom: 40px;
+        color: white;
+        line-height: 60px;
+      }
+      p {
+        font-size: 22px;
+        color: white;
+      }
+    }
+    .introduction_nav {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      min-width: 800px;
+      nav {
+        ul {
+          width: 100%;
+          display: flex;
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            width: 25%;
+            height: 60px;
+            transition: all 1s;
+            &:hover {
+              background-color: rgb(95, 127, 255);
+              li {
+                color: black;
+                font-weight: 700;
+              }
+            }
+            li {
+              text-decoration: none;
+              color: #999;
+              font-size: 18px;
+            }
+          }
+          .intro_active {
+            background-color: rgb(95, 127, 255) !important;
+            li {
+              color: black !important;
+              font-weight: 700 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .introduction_hello {
+    @include intro_base;
+    margin-bottom: 80px;
+
+    h1 {
+      margin-bottom: 70px;
+      font-size: 40px;
+      text-align: center;
+    }
+    .introduction_hello_container {
+      display: flex;
+      justify-content: center;
+      .introduction_hello_content {
+        width: 50%;
+        h3 {
+          line-height: 40px;
+          color: #888;
+          margin-bottom: 80px;
+        }
+        p {
+          color: #888;
+        }
+      }
+      .introduction_hello_svg {
+        width: 50%;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          .path {
+            fill: none;
+            stroke: #000;
+            stroke-width: 3px;
+          }
+          .path1 {
+            stroke-dasharray: 6884;
+            animation: drawPath1 2s linear, floating 2.2s linear infinite;
+          }
+        }
+      }
+
+      @keyframes drawPath1 {
+        0% {
+          stroke-dashoffset: 6884;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes floating {
+        50% {
+          transform: translate3d(0, 40px, 0);
+        }
+      }
+    }
+  }
+  .introduction_career {
+    @include intro_base;
+    h1 {
+      margin-bottom: 70px;
+      font-size: 40px;
+      text-align: center;
+    }
+    .introduction_career_container {
+      display: flex;
+      .year_container {
+        width: 40%;
+        .introduction_career_year {
+          font-size: 90px;
+          color: skyblue;
+          font-weight: 600;
+          transition: all 0.5s;
+          display: flex;
+          overflow: hidden;
+          height: 90px;
+          ul {
+            display: inline-block;
+            transition: all 0.5s linear;
+            transform: translateY(-180px);
+            li {
+              list-style: none;
+              display: block;
+              height: 90px;
+            }
+          }
+        }
+      }
+
+      .year_fixed {
+        position: fixed !important;
+        top: 100px !important;
+        font-size: 100px Im !important;
+      }
+      .introduction_career_contents {
+        width: 55%;
+        .introduction_career_year_content {
+          margin-bottom: 160px;
+          ul {
+            li {
+              display: flex;
+              .date {
+                display: flex;
+
+                .dot {
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                  background-color: skyblue;
+                  margin-top: 5px;
+                  margin-right: 10px;
+                }
+                .date_txt {
+                  p {
+                    font-size: 21px;
+                  }
+                }
+              }
+              .content_txt {
+                margin-left: 20px;
+                margin-bottom: 35px;
+              }
+            }
+          }
+        }
+        .year_2022 {
+        }
+        .year_2021 {
+        }
+        .year_2020 {
+        }
+      }
+    }
+  }
+  .introduction_news {
+    @include intro_base;
+    margin-bottom: 80px;
+    .introduction_news_title {
+      margin-bottom: 70px;
+      font-size: 40px;
+      text-align: center;
+    }
+    .news_board_container {
+      .news_board_content_list {
+        display: flex;
+        flex-direction: column;
+        .news_board_content {
+          display: flex;
+          column-gap: 100px;
+          margin-bottom: 50px;
+          .news_board_content_img {
+            width: 300px;
+            height: 250px;
+            background-color: violet;
+          }
+          .news_board_content_des {
+            margin: 25px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h1 {
+              font-size: 22px;
+            }
+            p {
+              font-size: 13px;
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+  }
+  .introduction_location {
+    @include intro_base;
+    margin-bottom: 80px;
+    h1 {
+      margin-bottom: 70px;
+      font-size: 40px;
+      text-align: center;
+    }
+    .introduction_location_kakao {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

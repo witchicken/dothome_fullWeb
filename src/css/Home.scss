@@ -1,0 +1,277 @@
+@mixin backgroundProps {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(70%);
+  transition: opacity 0.7s linear, transform 3s linear;
+}
+@mixin text_deco {
+  position: absolute;
+  top: 40%;
+  left: 100px;
+  width: 400px;
+  transition: all 1.5s ease-in-out;
+  color: white;
+  .Home_main_description_title {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .Home_main_description_content {
+    font-size: 26px;
+  }
+}
+.Home {
+  .Home_main {
+    height: 800px;
+    position: relative;
+    .Home_slide_1 {
+      background: center / cover no-repeat url("../img/comp_developer.jpg");
+      @include backgroundProps;
+      opacity: 0;
+      .Home_main_description_1 {
+        @include text_deco;
+        left: 200px;
+      }
+    }
+    .Home_slide_2 {
+      background: center / cover no-repeat url("../img/comp_suit.jpg");
+      @include backgroundProps;
+      opacity: 0;
+
+      .Home_main_description_2 {
+        @include text_deco;
+        left: -200px;
+      }
+    }
+    .Home_slide_3 {
+      background: center / cover no-repeat url("../img/comp_man_ballon.jpg");
+      @include backgroundProps;
+      opacity: 0;
+
+      .Home_main_description_3 {
+        @include text_deco;
+      }
+    }
+    .Home_slide_4 {
+      background: center / cover no-repeat url("../img/comp_black_chot.jpg");
+      @include backgroundProps;
+      opacity: 0;
+
+      .Home_main_description_4 {
+        @include text_deco;
+      }
+    }
+    .visible {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    .Home_slide_btn {
+      position: absolute;
+      z-index: 9999;
+      left: 50px;
+      bottom: 100px;
+      color: white;
+      span:not(:nth-child(2)) {
+        font-size: 30px;
+        cursor: pointer;
+      }
+      span:nth-child(2) {
+        font-size: 30px;
+        padding: 0 20px;
+      }
+    }
+  }
+  .Home_skill {
+    margin: 0 auto;
+    margin-top: 80px;
+    min-width: 600px;
+    text-align: center;
+    height: 800px;
+
+    .Home_skill_title {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+    .Home_skill_subtitle {
+      font-size: 26px;
+      color: #888;
+      margin-bottom: 30px;
+    }
+    .Home_skill_list {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin: 0 auto;
+
+      .Home_skill_detail {
+        color: white;
+        height: 500px;
+        width: 350px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          .Home_skill_bottom {
+            background-color: skyblue;
+          }
+          .Home_skill_text {
+            background-color: skyblue;
+            bottom: 60px;
+          }
+        }
+        .Home_skill_text {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          height: 220px;
+          position: absolute;
+          transition: all 0.5s linear;
+          color: white;
+          padding: 10px;
+          h2 {
+            font-size: 25px;
+            margin-bottom: 5px;
+          }
+          a {
+            display: inline;
+            padding: 3px 6px;
+            border: 1px solid black;
+            background-color: white;
+            margin-top: 10px;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+              font-weight: 700;
+            }
+          }
+        }
+        .Home_skill_bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60px;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .Home_portfolio {
+    min-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 800px;
+    .Home_portfolio_title {
+      width: 500px;
+      text-align: center;
+      margin-bottom: 30px;
+      h1 {
+        font-size: 46px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 18px;
+        color: #888;
+      }
+    }
+    .Home_portfolio_list {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      .Home_portfolio_detail {
+        .Home_portfolio_img {
+          height: 250px;
+          width: 220px;
+        }
+        .Home_port_img_01 {
+          background: 43% 50% / cover no-repeat url("../img/01_travel.jpg");
+        }
+        .Home_port_img_02 {
+          background: 43% 50% / cover no-repeat url("../img/02_svg.jpg");
+        }
+        .Home_port_img_03 {
+          background: 43% 50% / cover no-repeat url("../img/03_countdown.jpg");
+        }
+        .Home_port_img_04 {
+          background: 43% 50% / cover no-repeat url("../img/04_enigmu.jpg");
+        }
+      }
+    }
+    .Home_portfolio_more {
+      margin-top: 40px;
+      font-size: 22px;
+      border: 1px solid black;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        background-color: skyblue;
+      }
+    }
+  }
+  .Home_movebtn {
+    position: fixed;
+    right: 20px;
+    z-index: 9999;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 70px;
+      justify-content: space-between;
+      li {
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.7s;
+        &:hover {
+          color: skyblue;
+        }
+      }
+    }
+  }
+}
+.skill_front {
+  background: center / cover no-repeat url("../img/comp_front.jpg") !important;
+  a {
+    opacity: 0 !important;
+  }
+  &:hover {
+    a {
+      opacity: 1 !important;
+    }
+  }
+}
+.skill_back {
+  background: center / cover no-repeat url("../img/comp_back.jpg") !important;
+  a {
+    opacity: 0 !important;
+  }
+  &:hover {
+    a {
+      opacity: 1 !important;
+    }
+  }
+}
+.skill_db {
+  background: center / cover no-repeat url("../img/comp_db.jpg") !important;
+  a {
+    opacity: 0 !important;
+  }
+  &:hover {
+    a {
+      opacity: 1 !important;
+    }
+  }
+}

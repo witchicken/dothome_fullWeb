@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.header {
+  z-index: 9999;
+}
+
+.read {
+  height: auto;
+}
+.read .read_container {
+  position: relative;
+  height: 300px;
+}
+.read .read_container .read_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(0.8);
+  background: center/cover no-repeat url("../img/comp_board.jpg");
+}
+.read .read_container .read_background p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 8px;
+}
+.read .read_content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+.read .read_content .read_main h2 {
+  font-size: 34px;
+  text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 5px solid #c8c8c8;
+}
+.read .read_content .read_main .read_main_date_hit {
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.read .read_content .read_main .read_main_date_hit p {
+  margin-top: 10px;
+}
+.read .read_content .read_main .read_main_des {
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 30px;
+}
+.read .read_content .read_main .read_btn_thumbup {
+  float: right;
+  cursor: pointer;
+}
+.read .read_content .read_main .read_main_list {
+  margin-top: 50px;
+}
+.read .read_content .read_main .read_main_list ul {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=Read.css.map */

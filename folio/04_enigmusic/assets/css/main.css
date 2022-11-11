@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin:0 auto;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size:4.5rem;
+}
+h2{
+    font-size:2.5rem;
+}
+p{
+    font-size:1.2rem;
+}
+ul,li{
+    list-style: none;
+    margin:0;
+}
+.main_section{
+    background:#111;
+    height: 100vh;
+}
+.main_nav{
+    width:100%;
+    max-width:1440px;
+    padding-top:3rem;
+    padding-bottom:3rem;    
+}
+.main_nav_ul{
+    width:100%;
+    display:flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items:center;
+}
+.nav_item{
+    color:#eee;
+    font-size:1.4rem;
+}
+.main_logo{
+    filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+.main_container{
+    color:#eee;
+    text-align: center; 
+    width:800px;   
+}
+.main_container h1{
+    padding-bottom:1.5rem;
+}
+.main_container p{
+    padding-bottom:1.2rem;
+}
+.Btn_buy{
+    background:#8e2cd8;
+    width:200px;
+    height:50px;
+    font-size: 1.5rem;
+    color:#eee;
+    display:block;
+    border-radius: 20px;
+}
+.product_section{
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    padding:20px;
+
+}
+.product{
+    width: 100%;
+    height:800px;
+    
+}
+.product h1{
+    padding-top : 20px;
+    width: 70%;
+}
+.product p{
+    width: 70%;
+    font-size: 1.3rem;
+}
+.sample1{
+    background: no-repeat center center / cover url("../img/pro33.jpg");
+    margin-right:20px;
+}
+.sample2{
+    background: no-repeat center center / cover url("../img/product2.jpg")
+}
+.product_description{
+    display:flex;
+    padding:50px;
+    text-align:left;
+}
+.product_img{
+    width:450px;
+    margin-right:200px;
+}
+.product_description .description{
+    padding-top:40px;
+    width:  65%;
+    height:400px;
+}
+.description h1{
+    overflow:hidden;
+}
+.description > p{
+    width: 100%;
+    height:300px;
+    padding-right:100px;
+    line-height:2.3rem;
+}
+.description_spec{
+    display:flex;
+    justify-content: space-between;
+    text-align:center;
+    padding-right: 100px;
+}
+.description_spec p{
+    font-size:0.7rem;
+}
+.description_spec li h2{
+    width:100%;
+}
+.newProducts{
+    margin-top:150px;
+    text-align:center;
+    width:90%;
+    max-width:1600px;
+    height:100vh;
+}
+.slider{
+    position:relative;
+    width:80%;
+    max-width:1400px;
+}
+.slide{
+    width:50%; 
+    position:absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    opacity:0;
+    transition:1s;
+}
+.visible{
+    opacity:1;
+}
+.slide1_img{
+    background: no-repeat center center / cover url("../img/airpod2.jpg");
+    width: 500px;
+    height:500px;
+    text-indent:-9999rem;
+}
+.slide2_img{
+    background: no-repeat center center / cover url("../img/123.png");
+    width: 500px;
+    height:500px;
+    text-indent:-9999rem;
+}
+.slide3_img{
+    background: no-repeat center center / cover url("../img/qcy11.jpg");
+    width: 500px;
+    height:500px;
+    text-indent:-9999rem;
+}
+.btn{
+    position:absolute;
+    cursor:pointer;
+}
+.btn_prev{
+    left:0px;
+    top:250px;
+    font-size:38px;
+}
+.btn_next{
+    right:0px;
+    top:250px;
+    font-size:38px;
+}
+.customerReview{
+    width:90%;
+    margin-bottom:60px;
+}
+.cus_description{
+    margin-bottom:45px;
+    padding-bottom:30px;
+    border-bottom:1px solid gray;
+}
+.cus_container{
+    display:flex;
+    width:100%;
+}
+.customer{
+    width:500px;
+    margin-top :150px;
+}
+.customer >p {
+    height:150px;
+}
+.customer_user{
+    margin-top:25px;
+    display:flex;
+    margin-top:50px;
+    text-align:left;
+    white-space: nowrap;
+}
+.cus_picture{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background-color:gray;
+    position:relative;
+    top:30px;
+    margin:0;
+}
+.cus_picture + div{
+    margin:0;
+    padding:20px;
+}
+.footer{
+    background:#222;
+    width:100%;
+}
+.footer_container{
+    width:80%;
+    display:flex;
+    justify-content:space-between;
+    text-align: center;
+    color:#eee;
+    padding:100px;  
+}
+.footer_company{
+    width:30%;
+}
+.footer_company >div{
+    display:inline-block;
+    padding-bottom:30px;
+}
+.footer_logo{
+    filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+    padding-bottom:10px;
+}
+.footer_Menu{
+    width: 20%;
+}
+.footer_Menu ul li:first-child{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.footer_Menu ul li{
+    line-height:2.5rem;
+}

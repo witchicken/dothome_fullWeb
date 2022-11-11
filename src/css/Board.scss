@@ -1,0 +1,64 @@
+//google fonts
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+}
+@mixin intro_base {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 100px;
+}
+.header {
+  z-index: 9999;
+}
+.board {
+  height: auto;
+  background: #e8e8f3;
+  .board_container {
+    position: relative;
+    height: 650px;
+    .board_background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      filter: brightness(0.8);
+      background: center / cover no-repeat url("../img/comp_board.jpg");
+      p {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        color: white;
+        letter-spacing: 8px;
+      }
+    }
+  }
+  .board_content {
+    @include intro_base();
+    .board_list {
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 0 40px;
+      .board_head {
+      }
+      .board_body {
+        text-align: center;
+      }
+    }
+    .board_write {
+      a {
+        float: right;
+      }
+    }
+  }
+}

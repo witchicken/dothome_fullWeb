@@ -1,0 +1,218 @@
+@media all and (min-width: 1100px) {
+  .header:hover {
+    height: 280px !important;
+    overflow: visible;
+  }
+  .header_nav_mobile_list {
+    display: none;
+  }
+}
+@media all and (max-width: 1100px) and (min-width: 800px) {
+  .header_company_logo {
+    transform: translate(-10px, -10px);
+  }
+  .header_company_name {
+    display: none;
+  }
+  .header:hover {
+    height: 280px !important;
+    overflow: visible;
+  }
+  .header_nav_mobile_list {
+    display: none;
+  }
+}
+@media all and (max-width: 800px) {
+  .header_nav_mobile {
+    display: block !important;
+  }
+  .header_nav {
+    display: none;
+  }
+  .ham_click {
+    height: 280px !important;
+    background-color: white !important;
+  }
+  .header_nav_mobile_list {
+    position: absolute;
+    top: 120px;
+    color: black;
+    overflow: hidden;
+  }
+  .header_nav_mobile_list li {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .header_nav_mobile_list li a p {
+    color: black;
+  }
+  .header_nav_mobile_list li a p:hover {
+    color: violet;
+  }
+}
+.header {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  height: 100px;
+  transition: all 0.4s;
+  top: 0;
+  z-index: 9999;
+  background-color: transparent;
+}
+.header:hover {
+  background-color: white;
+}
+.header:hover .header_back a {
+  color: black !important;
+}
+.header:hover .header_nav nav ul li a p {
+  color: black !important;
+}
+.header:hover .header_company_name span:last-child {
+  color: black !important;
+}
+.header .header_back {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+.header .header_back a {
+  color: white;
+  text-decoration: none;
+}
+.header .header_back a:first-child {
+  margin-right: 10px;
+}
+.header .header_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px 0 40px;
+  margin: 0 auto;
+}
+.header .header_container .header_company {
+  display: flex;
+}
+.header .header_container .header_company .header_company_logo {
+  width: 50px;
+  height: 50px;
+  background: center/cover no-repeat url("../wmTrans.png");
+}
+.header .header_container .header_company .header_company_name {
+  text-decoration: none;
+}
+.header .header_container .header_company .header_company_name span:first-child {
+  font-size: 40px;
+  color: rgb(173, 171, 171);
+}
+.header .header_container .header_company .header_company_name span:last-child {
+  font-size: 45px;
+  color: white;
+}
+.header .header_container .header_nav nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 700px;
+}
+.header .header_container .header_nav nav ul li {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  font-family: noto-sans-cjk-kr, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.header .header_container .header_nav nav ul li a p {
+  color: white;
+  text-decoration: none;
+}
+.header .header_container .header_nav nav ul li .header_nav_detail {
+  margin-top: 50px;
+}
+.header .header_container .header_nav nav ul li .header_nav_detail div:not(:first-child) {
+  margin-top: 20px;
+}
+.header .header_container .header_nav nav ul li .header_nav_detail div {
+  color: #888;
+}
+.header .header_container .header_nav nav ul li .header_nav_detail div a {
+  text-decoration: none;
+  transition: all 0.5s;
+  color: #888;
+}
+.header .header_container .header_nav nav ul li .header_nav_detail div a:hover {
+  color: purple;
+}
+.header .header_container .header_nav nav ul li p {
+  transition: all 1s;
+}
+.header .header_container .header_nav nav ul li p:hover {
+  transform-origin: top left;
+  transform: rotateX(360deg) scale(1.2);
+}
+.header .header_container .header_nav_mobile {
+  display: none;
+  width: 44px;
+  height: 33px;
+  position: relative;
+  margin-top: 5px;
+}
+.header .header_container .header_nav_mobile .hamburger {
+  position: absolute;
+  width: 44px;
+  height: 33px;
+  cursor: pointer;
+}
+.header .header_container .header_nav_mobile .hamburger b {
+  position: absolute;
+  left: 0;
+  width: 44px;
+  height: 5px;
+  background-color: #888;
+  transition: all 0.5s;
+}
+.header .header_container .header_nav_mobile .hamburger b:nth-child(1) {
+  top: 0;
+  opacity: 1;
+}
+.header .header_container .header_nav_mobile .hamburger b:nth-child(2) {
+  top: 50%;
+}
+.header .header_container .header_nav_mobile .hamburger b:nth-child(3) {
+  top: 100%;
+}
+.header .header_container .header_nav_mobile .hamburger b:nth-child(4) {
+  opacity: 1;
+  top: 50%;
+}
+.header .header_container .header_nav_mobile .ham_active b:nth-child(1) {
+  opacity: 0;
+}
+.header .header_container .header_nav_mobile .ham_active b:nth-child(2) {
+  transform: rotate(135deg);
+}
+.header .header_container .header_nav_mobile .ham_active b:nth-child(3) {
+  opacity: 0;
+}
+.header .header_container .header_nav_mobile .ham_active b:nth-child(4) {
+  transform: rotate(-135deg);
+}
+.header .btn_toTop {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: -9999;
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.header .if_scroll {
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+
+/*# sourceMappingURL=Header.css.map */
